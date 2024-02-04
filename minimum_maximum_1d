@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,max=0,min=0,ar[5],j;
+	cout<<"enter the elements";
+	for(i=0;i<=4;i++)
+	cin>>ar[i];
+	
+	
+	max=min=ar[0];
+	
+	for(i=0;i<=4;i++)
+	if(ar[i]>max)
+	{
+		max=ar[i];
+		}
+	else if(ar[i]<min)
+	{
+		 min=ar[i];
+	}
+	cout<<"The max no. is"<<max;
+	cout<<"The min no. is"<<min;
+}
+                                            
