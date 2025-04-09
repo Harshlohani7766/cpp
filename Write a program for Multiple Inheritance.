@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class shape
+{public:
+void setwidth(int w)
+{width=w;}
+void setheight(int h)
+{height=h;}
+protected:
+int width;
+int height;
+};
+//Base class Paintcost
+class Paintcost
+{public:
+int getCost(int area)
+{return area*70;}
+};
+//Derived Class
+class Rectangle:public shape, public Paintcost
+{public:
+int getArea(){return(width*height);}
+};
+int main()
+{
+Rectangle Rect;
+int area;
+Rect.setwidth(5);
+Rect.setheight(7);
+area=Rect.getArea();
+//Print the area of the object
+cout<<"Total area:"<<Rect.getArea()<<endl;
+//Print the total cost of Painting
+cout<<"Total paint costs:$"<<Rect.getCost(area)<<endl;
+}
